@@ -3,15 +3,17 @@
 // При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами. 
 void PrintArray(string[] arr)
 {
+    Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write(arr[i] + " ");
+        Console.Write(" " + arr[i] + " ");
     }
+    Console.Write("]");
 }
 
 string[] Words(string[] arr)
 {
-    string[] words =new string[1];
+    string[] words = new string[1];
     string three_leters = string.Empty;
     for (int i = 0; i < arr.Length; i++)
     {
@@ -22,6 +24,6 @@ string[] Words(string[] arr)
 }
 string[] array = { "Hello", "2", "World", ":-)" };
 PrintArray(array);
-string [] final_array = Words(array);
+string[] final_array = Words(array);
 Console.Write("---->");
 PrintArray(final_array);
